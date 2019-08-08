@@ -24,7 +24,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.view.Menu;
 
-public class MainActivity extends FragmentActivity
+public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
@@ -32,7 +32,7 @@ public class MainActivity extends FragmentActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar);
 
         TabLayout tablayout = (TabLayout)findViewById(R.id.tabs);
         ViewPager pager = (ViewPager)findViewById(R.id.viewpager);

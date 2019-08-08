@@ -72,7 +72,18 @@ public class Trending extends Fragment {
                     "    \"articles\": [\n" +
                     "        {\n" +
                     "            \"title\" : \"Firefox\",\n" +
-                    "            \"subtitle\": \"Il miglior browser libero di sempre\",\n" +
+                    "            \"subtitle\": \"Il miglior browser libero di sempre Il miglior browser libero di sempre Il miglior browser libero di sempre Il miglior browser libero di sempre\",\n" +
+                    "            \"abstract\" : \"\",\n" +
+                    "            \"article-url\" : \"https://libreadvice.org/firefox\"\n" +
+                    "        },\n" +
+                    "        {\n" +
+                    "            \"title\" : \"Privacy: perché volerla\",\n" +
+                    "            \"subtitle\" : \"Il miglior browser libero di sempre La libertà basta volerla.” (Marguerite Yourcenar)\",\n" +
+                    "            \"abstract\" : \"\",\n" +
+                    "            \"article-url\" : \"https://libreadvice.org/privacy-perche-volerla\"\n" +
+                    "        }, {\n" +
+                    "            \"title\" : \"Firefox\",\n" +
+                    "            \"subtitle\": \"Il miglior browser libero di sempre Il miglior browser libero di sempre Il miglior browser libero di sempre\",\n" +
                     "            \"abstract\" : \"\",\n" +
                     "            \"article-url\" : \"https://libreadvice.org/firefox\"\n" +
                     "        },\n" +
@@ -89,18 +100,7 @@ public class Trending extends Fragment {
                     "        },\n" +
                     "        {\n" +
                     "            \"title\" : \"Privacy: perché volerla\",\n" +
-                    "            \"subtitle\" : \"La libertà basta volerla.” (Marguerite Yourcenar)\",\n" +
-                    "            \"abstract\" : \"\",\n" +
-                    "            \"article-url\" : \"https://libreadvice.org/privacy-perche-volerla\"\n" +
-                    "        }, {\n" +
-                    "            \"title\" : \"Firefox\",\n" +
-                    "            \"subtitle\": \"Il miglior browser libero di sempre\",\n" +
-                    "            \"abstract\" : \"\",\n" +
-                    "            \"article-url\" : \"https://libreadvice.org/firefox\"\n" +
-                    "        },\n" +
-                    "        {\n" +
-                    "            \"title\" : \"Privacy: perché volerla\",\n" +
-                    "            \"subtitle\" : \"La libertà basta volerla.” (Marguerite Yourcenar)\",\n" +
+                    "            \"subtitle\" : \"La libertà basta volerla.” (Marguerite Yourcenar) Il miglior browser libero di sempre Il miglior browser libero di sempre Il miglior browser libero di sempre Il miglior browser libero di sempre\",\n" +
                     "            \"abstract\" : \"\",\n" +
                     "            \"article-url\" : \"https://libreadvice.org/privacy-perche-volerla\"\n" +
                     "        }, {\n" +
