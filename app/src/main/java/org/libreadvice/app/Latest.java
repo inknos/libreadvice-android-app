@@ -29,8 +29,8 @@ public class Latest extends Fragment {
 
         String finalUrl="https://libreadvice.org/feed/";
         HandleXML obj;
-        obj = new HandleXML(finalUrl);
-        obj.fetchXML();
+        //obj = new HandleXML(finalUrl);
+        //obj.fetchXML();
 
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_latest, container, false);

@@ -65,7 +65,8 @@ public class Trending extends Fragment {
             HttpHandler sh = new HttpHandler();
             // Making a request to url and getting response
             String url = "http://api.androidhive.info/contacts/";
-            String jsonStr = sh.makeServiceCall(url);
+            String jsonStr = "";
+            //String jsonStr = sh.makeServiceCall(url);
 
             jsonStr = "{\n" +
                     "    \"articles\": [\n" +
