@@ -64,106 +64,23 @@ public class Trending extends Fragment {
         protected Void doInBackground(Void... arg0) {
             HttpHandler sh = new HttpHandler();
             // Making a request to url and getting response
-            String url = "http://api.androidhive.info/contacts/";
-            String jsonStr = "";
-            //String jsonStr = sh.makeServiceCall(url);
+            String url = "http://libreadvice.herokuapp.com/libredb/api/articles/";
+            String jsonStr = sh.makeServiceCall(url);
 
-            jsonStr = "{\n" +
-                    "    \"articles\": [\n" +
-                    "        {\n" +
-                    "            \"title\" : \"Firefox\",\n" +
-                    "            \"subtitle\": \"Il miglior browser libero di sempre Il miglior browser libero di sempre Il miglior browser libero di sempre Il miglior browser libero di sempre\",\n" +
-                    "            \"abstract\" : \"\",\n" +
-                    "            \"article-url\" : \"https://libreadvice.org/firefox\"\n" +
-                    "        },\n" +
-                    "        {\n" +
-                    "            \"title\" : \"Privacy: perché volerla\",\n" +
-                    "            \"subtitle\" : \"Il miglior browser libero di sempre La libertà basta volerla.” (Marguerite Yourcenar)\",\n" +
-                    "            \"abstract\" : \"\",\n" +
-                    "            \"article-url\" : \"https://libreadvice.org/privacy-perche-volerla\"\n" +
-                    "        }, {\n" +
-                    "            \"title\" : \"Firefox\",\n" +
-                    "            \"subtitle\": \"Il miglior browser libero di sempre Il miglior browser libero di sempre Il miglior browser libero di sempre\",\n" +
-                    "            \"abstract\" : \"\",\n" +
-                    "            \"article-url\" : \"https://libreadvice.org/firefox\"\n" +
-                    "        },\n" +
-                    "        {\n" +
-                    "            \"title\" : \"Privacy: perché volerla\",\n" +
-                    "            \"subtitle\" : \"La libertà basta volerla.” (Marguerite Yourcenar)\",\n" +
-                    "            \"abstract\" : \"\",\n" +
-                    "            \"article-url\" : \"https://libreadvice.org/privacy-perche-volerla\"\n" +
-                    "        }, {\n" +
-                    "            \"title\" : \"Firefox\",\n" +
-                    "            \"subtitle\": \"Il miglior browser libero di sempre\",\n" +
-                    "            \"abstract\" : \"\",\n" +
-                    "            \"article-url\" : \"https://libreadvice.org/firefox\"\n" +
-                    "        },\n" +
-                    "        {\n" +
-                    "            \"title\" : \"Privacy: perché volerla\",\n" +
-                    "            \"subtitle\" : \"La libertà basta volerla.” (Marguerite Yourcenar) Il miglior browser libero di sempre Il miglior browser libero di sempre Il miglior browser libero di sempre Il miglior browser libero di sempre\",\n" +
-                    "            \"abstract\" : \"\",\n" +
-                    "            \"article-url\" : \"https://libreadvice.org/privacy-perche-volerla\"\n" +
-                    "        }, {\n" +
-                    "            \"title\" : \"Firefox\",\n" +
-                    "            \"subtitle\": \"Il miglior browser libero di sempre\",\n" +
-                    "            \"abstract\" : \"\",\n" +
-                    "            \"article-url\" : \"https://libreadvice.org/firefox\"\n" +
-                    "        },\n" +
-                    "        {\n" +
-                    "            \"title\" : \"Privacy: perché volerla\",\n" +
-                    "            \"subtitle\" : \"La libertà basta volerla.” (Marguerite Yourcenar)\",\n" +
-                    "            \"abstract\" : \"\",\n" +
-                    "            \"article-url\" : \"https://libreadvice.org/privacy-perche-volerla\"\n" +
-                    "        }, {\n" +
-                    "            \"title\" : \"Firefox\",\n" +
-                    "            \"subtitle\": \"Il miglior browser libero di sempre\",\n" +
-                    "            \"abstract\" : \"\",\n" +
-                    "            \"article-url\" : \"https://libreadvice.org/firefox\"\n" +
-                    "        },\n" +
-                    "        {\n" +
-                    "            \"title\" : \"Privacy: perché volerla\",\n" +
-                    "            \"subtitle\" : \"La libertà basta volerla.” (Marguerite Yourcenar)\",\n" +
-                    "            \"abstract\" : \"\",\n" +
-                    "            \"article-url\" : \"https://libreadvice.org/privacy-perche-volerla\"\n" +
-                    "        }, {\n" +
-                    "            \"title\" : \"Firefox\",\n" +
-                    "            \"subtitle\": \"Il miglior browser libero di sempre\",\n" +
-                    "            \"abstract\" : \"\",\n" +
-                    "            \"article-url\" : \"https://libreadvice.org/firefox\"\n" +
-                    "        },\n" +
-                    "        {\n" +
-                    "            \"title\" : \"Privacy: perché volerla\",\n" +
-                    "            \"subtitle\" : \"La libertà basta volerla.” (Marguerite Yourcenar)\",\n" +
-                    "            \"abstract\" : \"\",\n" +
-                    "            \"article-url\" : \"https://libreadvice.org/privacy-perche-volerla\"\n" +
-                    "        }, {\n" +
-                    "            \"title\" : \"Firefox\",\n" +
-                    "            \"subtitle\": \"Il miglior browser libero di sempre\",\n" +
-                    "            \"abstract\" : \"\",\n" +
-                    "            \"article-url\" : \"https://libreadvice.org/firefox\"\n" +
-                    "        },\n" +
-                    "        {\n" +
-                    "            \"title\" : \"Privacy: perché volerla\",\n" +
-                    "            \"subtitle\" : \"La libertà basta volerla.” (Marguerite Yourcenar)\",\n" +
-                    "            \"abstract\" : \"\",\n" +
-                    "            \"article-url\" : \"https://libreadvice.org/privacy-perche-volerla\"\n" +
-                    "        }\n" +
-                    "    ]\n" +
-                    "}";
             Log.e(TAG, "Response from url: " + jsonStr);
             if (jsonStr != null) {
                 try {
                     JSONObject jsonObj = new JSONObject(jsonStr);
                     // Getting JSON Array node
-                    JSONArray contacts = jsonObj.getJSONArray("articles");
+                    JSONArray contacts = jsonObj.getJSONArray("results");
 
                     // looping through All Contacts
                     for (int i = 0; i < contacts.length(); i++) {
                         JSONObject c = contacts.getJSONObject(i);
-                        String title = c.getString("title");
-                        String subtitle = c.getString("subtitle");
-                        String abs = c.getString("abstract");
-                        String article_url = c.getString("article-url");
+                        String title = c.getString("art_title");
+                        String subtitle = c.getString("art_subtitle");
+                        String abs = c.getString("art_abstract");
+                        String article_url = c.getString("art_link");
                         //String id = c.getString("id");
                         //String name = c.getString("name");
                         //String email = c.getString("email");
